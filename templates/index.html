@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your Personal AI Assistant">
+    <title>AI Chatbot - Gemini Assistant</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <div class="header-content">
+                <div class="bot-avatar">
+                    <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/cfb2eaa0-d804-55fe-929a-6734d721e703/0831c2a9-3a2b-5bf7-b70f-05f1d51f5cdb.jpg" alt="Bot" class="bot-img">
+                </div>
+                <div class="header-info">
+                    <h1>Personal AI Assistant</h1>
+                    <span class="status">
+                        <span class="status-dot"></span>
+                        Online
+                    </span>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="clear-btn" onclick="clearChat()" title="Clear Chat">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/cfb2eaa0-d804-55fe-929a-6734d721e703/0831c2a9-3a2b-5bf7-b70f-05f1d51f5cdb.jpg" alt="Bot" class="bot-img">
+                </div>                
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <p>👋 Hello! I'm your Personal AI Assistant. How can I help you today?</p>
+                    </div>
+                    <span class="message-time">Just now</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="message-avatar">
+                <img src="https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/cfb2eaa0-d804-55fe-929a-6734d721e703/0831c2a9-3a2b-5bf7-b70f-05f1d51f5cdb.jpg" alt="Bot" class="bot-img">
+            </div>            
+            <div class="typing-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div class="chat-input-container">
+            <form class="chat-input-form" id="chatForm">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Type your message here..."
+                        rows="1"
+                    ></textarea>
+                    <button type="submit" class="send-btn" id="sendBtn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
